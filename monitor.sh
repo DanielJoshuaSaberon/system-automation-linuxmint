@@ -14,3 +14,7 @@ echo
 echo "Disk Usage"
 df -h --total | awk '/total/{print "Total Disk: "$2", Used: "$1", Free: "$1}'
 echo
+
+# Network Connection 
+echo "Active Network Connections: $(ss -tun | wc -l)"
+echo
